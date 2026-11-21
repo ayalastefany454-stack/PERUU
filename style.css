@@ -1,0 +1,288 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7faf7;
+    color: #26352b;
+}
+
+
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    background: rgba(17, 54, 37, 0.96);
+    padding: 15px 0;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+    font-size: 21px;
+}
+
+.nav-link {
+    color: white !important;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+
+/* PORTADA */
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.75),
+            rgba(0,0,0,0.15)
+        ),
+        url("img/machu-picchu.jpg")
+        center/cover no-repeat;
+
+    padding: 120px 10%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.etiqueta {
+    color: #ffc107;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 68px);
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+
+/* TÍTULOS */
+.subtitulo {
+    color: #16834c;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.titulo {
+    font-size: 36px;
+    font-weight: 800;
+    color: #174d34;
+    margin: 12px 0;
+}
+
+
+/* TARJETAS DE DESTINOS */
+.destino-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.09);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.destino-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 12px 25px rgba(0,0,0,0.16);
+}
+
+.destino-card img {
+    height: 190px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.destino-card .card-body {
+    padding: 20px;
+}
+
+.destino-card .card-title {
+    color: #17633c;
+    font-weight: bold;
+}
+
+.destino-card .btn {
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+
+/* CULTURA */
+.cultura {
+    background: linear-gradient(135deg, #123d2b, #087747);
+    color: white;
+}
+
+.cultura .subtitulo {
+    color: #ffc107;
+}
+
+.cultura .titulo {
+    color: white;
+}
+
+.texto-cultura {
+    max-width: 750px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.cultura-item {
+    padding: 30px 15px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 15px;
+
+    height: 100%;
+    transition: 0.3s;
+}
+
+.cultura-item:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-5px);
+}
+
+.cultura-item i {
+    font-size: 40px;
+    color: #ffc107;
+}
+
+.cultura-item h4 {
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+
+/* CUESTIONARIO */
+.quiz-box {
+    max-width: 650px;
+
+    background: white;
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.opciones {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.opcion {
+    padding: 13px;
+
+    border: 2px solid #dce8df;
+    background: #f7faf7;
+
+    border-radius: 10px;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.opcion:hover:not(:disabled) {
+    background: #e0f1e5;
+    border-color: #16834c;
+    cursor: pointer;
+}
+
+.opcion:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+
+/* VENTANA MODAL */
+.modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: #174d34;
+    color: white;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+
+/* PIE DE PÁGINA */
+.footer {
+    background: #103b29;
+    color: white;
+    padding: 35px 15px;
+}
+
+.footer h4 {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.footer p {
+    margin-top: 10px;
+    color: #e1e9e3;
+}
+
+
+/* DISEÑO PARA CELULARES */
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 550px;
+        padding: 110px 7%;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .titulo {
+        font-size: 29px;
+    }
+
+    .quiz-box {
+        padding: 23px;
+    }
+
+    .navbar-brand {
+        font-size: 17px;
+    }
+}
